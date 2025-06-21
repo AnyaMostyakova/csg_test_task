@@ -1,0 +1,623 @@
+/* === АДАПТИВНОСТЬ === */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-icons {
+    display: none;
+  }
+
+  .slide-wrapper {
+    flex-direction: column;
+  }
+
+  .slide-image,
+  .slide-text {
+    flex: none;
+    width: 100%;
+    height: 50%;
+  }
+
+  .slide-text {
+    padding-bottom: 40px;
+  }
+
+  .hero-slide {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-content {
+    bottom: 20px;
+    left: 20px;
+    font-size: 0.9rem;
+  }
+
+  .product-info {
+    font-size: 0.9rem;
+  }
+}
+
+/* === БАЗОВЫЕ СТИЛИ === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+  width: 1920px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* === HEADER === */
+.header {
+  position: absolute;
+  margin-top: 69px;
+  width: 100%;
+  padding: 0px 108px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 20px;
+}
+
+
+/* === SIDEBAR === */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -500px;
+  width: 500px;
+  height: 920px;
+  background-color: #fff;
+  color: #000;
+  z-index: 100;
+  padding: 80px 30px;
+  transition: left 0.3s ease-in-out;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.close-btn {
+  padding-left: 77px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.sidebar-logo {
+  margin-left:30px;
+  width: 250px;
+  height: 50px;
+}
+
+.sidebar-menu {
+  padding-left: 77px;
+  padding-top: 43px;
+  list-style: none;
+  margin: 0 0 70px 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+/* Жирность только для "NEW YEAR COLLECTION" */
+.sidebar-menu li:nth-child(7) {
+  font-weight: 700;
+}
+
+.sidebar-menu li:hover {
+  color: #999;
+}
+
+.sidebar-button,
+.sidebar-gift {
+  font-size: 14px;
+  width: 355px;
+  height: 50px;
+  margin-left: 77px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Чёрная кнопка */
+.sidebar-button {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Серая кнопка */
+.sidebar-gift {
+  background-color: #B3B3B3;
+  color: #000;
+}
+
+/* Ховеры */
+.sidebar-button:hover {
+  background-color: #222;
+}
+
+.sidebar-gift:hover {
+  background-color: #999;
+}
+
+.sidebar-bottom {
+  color: #000;
+  padding-top: 160px;
+}
+
+.sidebar-bottom .brand {
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+}
+
+.sidebar-bottom .copyright {
+  font-size: 10px;
+  display: block;
+  color: #777575;
+}
+
+
+
+/* === HERO SLIDER === */
+.hero-slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  will-change: transform;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-wrapper {
+    margin-top: 109px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-image {
+  flex: 1;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+
+/* === ТЕКСТ НАД СЛАЙДЕРАМИ === */
+.slider-overlay-text {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 5;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider-overlay-text .subtitle {
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.slider-overlay-text .look-link {
+  font-size: 1rem;
+  text-decoration: underline;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* === SWIPER ARROWS === */
+.swiper-button-prev,
+.swiper-button-next {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+  margin: 0px 50px;
+}
+
+/* === PRODUCT SECTION === */
+.products {
+  padding: 80px 0;
+  background-color: #fff;
+  color: #000;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea;
+  padding-top: 140px;
+  padding-bottom: 258px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-card img {
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+  padding-bottom: 15px;
+}
+
+.product-info {
+  position: relative;
+  padding-right: 215px;
+  color: #000;
+}
+
+.favorite {
+  width: 33px;
+  height: 33px;
+  background-image: url("images/Star 1.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transition: background-image 0.3s ease;
+}
+
+
+/* === FASHION SHOW HERO SLIDER === */
+.hero-slider--fashion {
+  background-color: #000;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-slider--fashion .swiper-container {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slider--fashion .swiper-wrapper-jacket {
+  will-change: transform;
+}
+
+.hero-slider--fashion .swiper-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-slider--fashion .slide-wrapper-jacket {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slider--fashion .slide-image {
+  flex: 1;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-slider--fashion .slide-image img {
+  transform: scale(1.28);
+  transform-origin: center center; 
+  width: 100%;
+  height: auto; 
+  max-height: 100vh; 
+  object-fit: cover;
+  object-position: 30% 25%;
+}
+.collection-banner {
+  width: 100%;
+  height: 36px;
+  background-color: #000; 
+  color: #fff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Подзаголовки слева */
+.slider-overlay-subtext--fashion {
+  position: absolute;
+  left: 116px;
+  bottom: 130px;
+  z-index: 10;
+  color: #fff;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.slider-overlay-subtext--fashion .subtitle {
+  font-size: 50px;
+  letter-spacing: 1px;
+}
+
+.slider-overlay-subtext--fashion .collection-title {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* блок с жилетом */
+.wide-product-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  background-color: #fff;
+  color: #000;
+}
+
+.wide-product-image {
+  left: 0%;
+  flex: 1;
+}
+
+.wide-product-image img {
+  width: 810px;
+  height: 1080px;
+  object-fit: cover;
+}
+
+/* Переиспользуемая карточка */
+.product-card.single-card {
+  padding-top: 230px;
+  padding-right: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card.single-card img {
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+}
+
+.product-card .product-info-jacket {
+  position: relative;
+  padding-right: 305px;
+  text-align: left;
+}
+
+.favorite {
+  width: 33px;
+  height: 33px;
+  background-image: url("images/Star 1.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transition: background-image 0.3s ease;
+}
+
+/* футер */
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 120px 40px;
+  font-size: 14px;
+  line-height: 1.6;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-subscribe {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 40px;
+}
+
+.footer-subscribe p {
+  margin-bottom: 12px;
+}
+
+.subscribe-btn {
+  padding: 10px 24px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.subscribe-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.footer-columns {
+  display: flex;
+  flex: 2;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-column h4 {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 6px;
+}
+
+.footer-column a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+/* Bottom footer */
+.footer-bottom {
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-bottom img {
+  height: 32px;
+  width: 105px;
+  margin-left: 730px;
+}
+
+.to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 40px;
+  height: 40px;
+  background: #000;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  display: none; /* Скрыта по умолчанию */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.to-top.show {
+  display: block;
+}
+
