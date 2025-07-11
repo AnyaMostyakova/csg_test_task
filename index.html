@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Annonce</title>
   <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
-
-  <header class="header">
+<div class="top-wrapper">
+<header class="header">
   <div class="header-left">
     <div class="menu-icon" id="menuToggle">&#9776;</div>
     <div class="logo"><img src="images/logo.svg" alt="logo"></div>
@@ -20,6 +21,100 @@
     <a href="#"><span class="icon"><img src="images/favorites.png" alt="favorites"></span></a>
   </nav>
 </header>
+<div id="catalogPanel" class="catalog-panel">
+  <span id="closeCatalog" class="catalog-back">←</span>
+
+  <div class="catalog-wrapper">
+    <aside class="catalog-sidebar">
+      <h4>КАТЕГОРИИ</h4>
+      <hr class="catalog-line" />
+      <ul class="catalog-categories">
+        <li class="active">Все украшения</li>
+        <li>Серьги</li>
+        <li>Кольца</li>
+        <li>Браслеты</li>
+        <li>Цепочки</li>
+        <li>Сеты</li>
+        <li>Пояса</li>
+        <li>Чокеры</li>
+      </ul>
+    </aside>
+
+    <section class="catalog-grid">
+      <div class="product-item">
+        <img src="images/jewelry1.png" alt="Колье" />
+        <div class="product-meta">
+          <span>Колье</span>
+          <span>10 000 Р</span>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="images/jewelry1.png" alt="Колье" />
+        <div class="product-meta">
+          <span>Колье</span>
+          <span>10 000 Р</span>
+        </div>
+      </div><div class="product-item">
+        <img src="images/jewelry1.png" alt="Колье" />
+        <div class="product-meta">
+          <span>Колье</span>
+          <span>10 000 Р</span>
+        </div>
+      </div><div class="product-item">
+        <img src="images/jewelry1.png" alt="Колье" />
+        <div class="product-meta">
+          <span>Колье</span>
+          <span>10 000 Р</span>
+        </div>
+      </div><div class="product-item">
+        <img src="images/jewelry1.png" alt="Колье" />
+        <div class="product-meta">
+          <span>Колье</span>
+          <span>10 000 Р</span>
+        </div>
+      </div><div class="product-item">
+        <img src="images/jewelry1.png" alt="Колье" />
+        <div class="product-meta">
+          <span>Колье</span>
+          <span>10 000 Р</span>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+
+<section class="hero-slider">
+  <div class="slider-overlay-text">
+    <p class="subtitle">BE FEMININE - CHOOSE US</p>
+    <a href="#" class="look-link">LOOK ALL</a>
+  </div>
+
+  <div class="swiper-container main-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="slide-wrapper">
+          <div class="slide-image">
+            <img src="images/red_dress.jpg" alt="Red Dress" />
+          </div>
+          <div class="slide-empty"></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide-wrapper">
+          <div class="slide-image">
+            <img src="images/red_dress.jpg" alt="red_dress" />
+          </div>
+          <div class="slide-empty"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-button-prev main-prev"><img src="images/left.svg" alt="left"></div>
+    <div class="swiper-button-next main-next"><img src="images/right.svg" alt="right"></div>
+  </div>
+</section>
 
 <div class="sidebar" id="sidebar">
   <div class="sidebar-header">
@@ -42,87 +137,123 @@
   </ul>
   <button class="sidebar-button">СМОТРЕТЬ ВСЕ</button>
   <button class="sidebar-gift">GIFT СЕРТИФИЦИРОВАННАЯ КАРТА</button>
-  <div class="sidebar-bottom">
-    <span class="brand">ANNONCE</span><br>
-    <span class="copyright">Все права защищены</span>
+<div class="sidebar-bottom sidebar-bottom-desktop">
+  <span class="brand">ANNONCE</span><br>
+  <span class="copyright">Все права защищены</span>
+</div>
+
+<div class="sidebar-bottom sidebar-bottom-mobile">
+  <div class="account-section">
+    <img src="images/account.png" alt="account" />
+    <span>ЛИЧНЫЙ КАБИНЕТ</span>
   </div>
+  <div class="chat-link">ЧАТ</div>
+</div>
 
 </div>
 
-
-  <section class="hero-slider">
-  <div class="slider-overlay-text">
-    <p class="subtitle">BE FEMININE - CHOOSE US</p>
-    <a href="#" class="look-link">LOOK ALL</a>
-  </div>
-
-  <div class="swiper-container main-swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="slide-wrapper">
-          <div class="slide-image">
-            <img src="images/red_dress.png" alt="Red Dress" />
-          </div>
-          <div class="slide-empty"></div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="slide-wrapper">
-          <div class="slide-image">
-            <img src="images/red_dress.png" alt="red_dress" />
-          </div>
-          <div class="slide-empty"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="swiper-button-prev main-prev"><img src="images/left.svg" alt="left"></div>
-    <div class="swiper-button-next main-next"><img src="images/right.svg" alt="right"></div>
-  </div>
-</section>
-  
+</div>  
   <div class="collection-banner">
     NEW COLLECTION
   </div>
 
-  <section class="products">
-    <div class="container product-grid">
-      <div class="product-card">
-        <img src="images/denim.png" alt="Джинсовый костюм" />
-        <div class="product-info">
+ <section class="products">
+  <div class="container product-grid">
+    <div class="product-card">
+      <img src="images/denim.png" alt="Джинсовый костюм" />
+      <div class="product-info">
+        <div class="product-info-text">
           <p>ДЖИНСОВЫЙ КОСТЮМ</p>
           <p>12 990 РУБ.</p>
-          <div class="favorite"
-            data-default="images/Star 1.svg"
-            data-filled="images/fill_star.svg"
-            data-selected="false"></div>
+        </div>
+        <div class="favorite"
+             data-default="images/Star 1.svg"
+             data-filled="images/fill_star.svg"
+             data-selected="false"></div>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="images/denim.png" alt="Джинсовый костюм" />
+      <div class="product-info">
+        <div class="product-info-text">
+          <p>ДЖИНСОВЫЙ КОСТЮМ</p>
+          <p>12 990 РУБ.</p>
+        </div>
+        <div class="favorite"
+             data-default="images/Star 1.svg"
+             data-filled="images/fill_star.svg"
+             data-selected="false"></div>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="images/denim.png" alt="Джинсовый костюм" />
+      <div class="product-info">
+        <div class="product-info-text">
+          <p>ДЖИНСОВЫЙ КОСТЮМ</p>
+          <p>12 990 РУБ.</p>
+        </div>
+        <div class="favorite"
+             data-default="images/Star 1.svg"
+             data-filled="images/fill_star.svg"
+             data-selected="false"></div>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-container product-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="product-card">
+          <img src="images/denim.png" alt="Джинсовый костюм" />
+          <div class="product-info">
+            <div class="product-info-text">
+              <p>ДЖИНСОВЫЙ КОСТЮМ</p>
+              <p>12 990 РУБ.</p>
+            </div>
+            <div class="favorite"
+                 data-default="images/Star 1.svg"
+                 data-filled="images/fill_star.svg"
+                 data-selected="false"></div>
+          </div>
         </div>
       </div>
-      <div class="product-card">
-        <img src="images/denim.png" alt="Джинсовый костюм" />
-        <div class="product-info">
-          <p>ДЖИНСОВЫЙ КОСТЮМ</p>
-          <p>12 990 РУБ.</p>
-          <div class="favorite"
-            data-default="images/Star 1.svg"
-            data-filled="images/fill_star.svg"
-            data-selected="false"></div>
+
+      <div class="swiper-slide">
+        <div class="product-card">
+          <img src="images/denim.png" alt="Джинсовый костюм" />
+          <div class="product-info">
+            <div class="product-info-text">
+              <p>ДЖИНСОВЫЙ КОСТЮМ</p>
+              <p>12 990 РУБ.</p>
+            </div>
+            <div class="favorite"
+                 data-default="images/Star 1.svg"
+                 data-filled="images/fill_star.svg"
+                 data-selected="false"></div>
+          </div>
         </div>
       </div>
-      <div class="product-card">
-        <img src="images/denim.png" alt="Джинсовый костюм" />
-        <div class="product-info">
-          <p>ДЖИНСОВЫЙ КОСТЮМ</p>
-          <p>12 990 РУБ.</p>
-          <div class="favorite"
-            data-default="images/Star 1.svg"
-            data-filled="images/fill_star.svg"
-            data-selected="false"></div>
+
+      <div class="swiper-slide">
+        <div class="product-card">
+          <img src="images/denim.png" alt="Джинсовый костюм" />
+          <div class="product-info">
+            <div class="product-info-text">
+              <p>ДЖИНСОВЫЙ КОСТЮМ</p>
+              <p>12 990 РУБ.</p>
+            </div>
+            <div class="favorite"
+                 data-default="images/Star 1.svg"
+                 data-filled="images/fill_star.svg"
+                 data-selected="false"></div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
-  <div class="collection-banner">
+    <div class="swiper-button-prev product-prev"><img src="images/jeans_left.svg" alt="left" /></div>
+    <div class="swiper-button-next product-next"><img src="images/jeans_right.svg" alt="right" /></div>
+  </div>
+</section>
+<div class="collection-banner">
     SOON
   </div>
 
@@ -154,8 +285,8 @@
 
     <div class="swiper-button-prev fashion-prev"><img src="images/arrow_fashion_left.svg" alt="left"></div>
     <div class="swiper-button-next fashion-next"><img src="images/arrow_fashion_right.svg" alt="right"></div>
-  </div>
-</section>
+  </section>
+
 
 <section class="wide-product-highlight">
   <div class="wide-product-image">
@@ -165,8 +296,10 @@
   <div class="product-card single-card">
     <img src="images/jacket.png" alt="Жакет">
     <div class="product-info-jacket">
-      <p>ЖАКЕТ</p>
-      <p>12 990 РУБ.</p>
+      <div class="product-info-text">
+            <p>ЖАКЕТ</p>
+            <p>12 900 РУБ.</p>
+          </div>
       <div
         class="favorite"
         data-default="images/Star 1.svg"
