@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   new Swiper('.main-swiper', {
     loop: true,
+    speed: 800,
     navigation: {
       nextEl: '.main-next',
       prevEl: '.main-prev',
@@ -9,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   new Swiper('.fashion-swiper', {
     loop: true,
+    speed: 800,
     navigation: {
       nextEl: '.fashion-next',
       prevEl: '.fashion-prev',
@@ -64,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!productSwiperInstance) {
         productSwiperInstance = new Swiper('.product-swiper', {
           loop: true,
+          speed: 800,
           slidesPerView: 1,
           spaceBetween: 16,
           navigation: {
@@ -80,18 +83,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('resize', initProductSwiper);
   initProductSwiper();
-
-
-function updateSidebarHeight() {
-  const wrapper = document.querySelector('.top-wrapper');
-  const sidebar = document.getElementById('sidebar');
-  if (wrapper && sidebar) {
-    sidebar.style.height = `${wrapper.offsetHeight}px`;
-  }
-}
-
-updateSidebarHeight();
-window.addEventListener('resize', updateSidebarHeight);
 
 const catalogBtn = document.querySelector('.nav-icons img[alt="search"]')?.closest('a');
 const catalogPanel = document.getElementById('catalogPanel');
